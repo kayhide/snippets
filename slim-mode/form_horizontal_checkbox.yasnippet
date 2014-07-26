@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: form_horizontal_checkbox
+# key: //checkbox
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+.form-group
+  = f.label :${1:attribute}, class: 'control-label col-md-2'
+  .col-md-6
+    .checkbox
+      label
+        = f.check_box :$1
+//checkbox

@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: form_horizontal
+# key: formh
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+= form_for @${1:resource}, :html => { :class => "form-horizontal" } do |f|
+  //text_field$0
+  //text_area
+  //select
+  //checkbox
+  .form-group
+    .col-md-offset-2.col-md-6
+      = f.submit nil, :class => 'btn btn-primary'
+      '
+      = link_to t('.cancel', :default => t("helpers.links.cancel")), ${2:resources}_path, :class => 'btn btn-default'

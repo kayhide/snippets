@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: form_horizontal_text_area
+# key: //text_area
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+.form-group
+  = f.label :${1:attribute}, class: 'control-label col-md-2'
+  .col-md-6
+    = f.text_area :$1, rows: 8, class: 'form-control'
+//text_area

@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: form_horizontal_select
+# key: //select
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+.form-group
+  = f.label :${1:attribute}, class: 'control-label col-md-2'
+  .col-md-6
+    = f.select :$1,
+      ${2:choices}.map{|${3:obj}| [$3.${4:display}, $3.${5:value}]},
+      {include_blank: true},
+      class: 'form-control'
+//select
