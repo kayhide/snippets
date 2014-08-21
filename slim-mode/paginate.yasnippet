@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: paginate
+# key: paginate
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+= paginate @${1:resources}
+.clearfix
+  .pull-right.text-primary
+    b= number_with_delimiter(@$1.offset_value + 1)
+    | ～
+    b= number_with_delimiter(@$1.offset_value + @$1.length)
+    |  件目 - 全 
+    b= number_with_delimiter(@$1.total_count)
+    |  件
